@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>StepProject</title>
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+   <link href="https://d3j0t7vrtr92dk.cloudfront.net/danit/1624626442_favicon.png" rel="shortcut icon">
+   <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+   <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+
+   
+      <header class="header">
+
+         <div class="wrapper">
+
+            <a class="ham_link" href="index.html">
+               <div class="link_wrap">
+                  <img src="./img/Polygon.png" alt="hamImg" width="58" height="67">
+                  <p class="letter">H</p>
+                  <p class="the_hum">the<span class="colour_hum">Hum</span></p>
+               </div>
+            </a>
+
+            <nav class="header_nav">
+               <ul class="header_navigation">
+                  <li class="header_navigation_item">
+                     <a href="#home" class="navigation_item_link">HOME</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#about" class="navigation_item_link">ABOUT</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#blog" class="navigation_item_link">BLOG</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#skills" class="navigation_item_link">SKILLS</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#service" class="navigation_item_link">SERVICE</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#work" class="navigation_item_link">WORK</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#testimonial" class="navigation_item_link">TESTIMONIAL</a>
+                  </li>
+                  <li class="header_navigation_item">
+                     <a href="#" class="navigation_item_link">
+                        <svg  class="svg-test" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <rect x="0.909058" width="21.0909" height="20" fill="url(#pattern0)" />
+                           <defs>
+                              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                 <use xlink:href="#image0_2143_402"
+                                    transform="translate(0 -0.0272727) scale(0.0454545 0.0479339)" />
+                              </pattern>
+                              <image id="image0_2143_402" width="22" height="22"
+                                 xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAAAhlJREFUOI2l1EuITmEcx/HP+5oYJZdZyG02FqIkJeUSwmNyFzGUFNnY2ShZ2pCFLGxkQVm4pERuMYfkLs2GkoUsyEhWcsl1WDznzfM+HWbkt3r+//M/3+ec/63W1dUl0yBMxyoEjMUA9OAWzuI2PkEIIX8ftGT2JOzHgvKCVG2YjG24gV14UElFPTnPxiUsyaA/8C2xa5iPi+VfVapWpmIirqI9eXYdF/CsBI9HRwZ7h0UhhIdV4FYcx+rS9xF7cBDvs/iB2IzdGFX67qMjhNAUW8c8LE18B0pwDoWvOIztyuJhBpbngXUs8zun17CvApjrNM4k9oYq8KzEPocP/QD/FAvdW9rTiqIYnIMbufqCp/2ANvQ0+YhWjM7BaWv16r++JvG9+J6DX5XnQZjwD+BJGFqeP+B1Du5O7IViS/WlmjidjQF7EkJIh0hdHIKGlmFLP8DzsSmxj+UBdVwW24xYhL3o/As04BCGlHY3zudBLfiMneJIt2EETmElruCRONJTMBdbNaerDVNxLwXXkrW5BkcwLLv8nVj14WJuq9SDzhDCnYYj3W5nsBg3s5eGlX+RQrv97iYYgxNFUcypAhMXygpsFIv6Em/xBs/FaVsvbrn1mlusHSeLophFcyqq1IqRYvP3VDyfKe6NsYnvJdblX5zrM178AUosWKfmtLTjaF/gPhVCuIu12eXj/htcwu+LXfVY7KIdvwB/ZIC2Fm1HqgAAAABJRU5ErkJggg==" />
+                           </defs>
+                        </svg>
+
+                     </a>
+                  </li>
+               </ul>
+
+
+            </nav>
+         </div>
+      </header>
+      <section id="home" class="header_section">
+
+
+
+
+
+
+      <p class="ham_title_one">The Ham is <span class="ham_colour">Wordpress theme</span>
+      </p>
+
+      <p class="ham_title_two">we are creative
+
+      </p>
+      <p class="ham_title_three">Just Buy And Enjoy These Awesome Features
+
+      </p>
+      <div class="header-links_wrap">
+         <a href="#" class="explore_now">
+            EXPLORE NOW
+         </a>
+
+         <a href="#" class="buy_now">
+            PURCHASE NOW
+         </a>
+      </div>
+
+   </section>
+
+   <section id="about" class="ham_options">
+      <ul class="options">
+         <li class="option_items option_item1">
+            <img class="option_logo" src="./img/first.png" alt="" width="61" height="100">
+            <p class="option_item_title">
+               Different theme option
+            </p>
+
+         </li>
+
+         <li class="option_items  option_item2">
+            <img class="option_logo" src="./img/second.png" alt="" width="96" height="78">
+            <p class="option_item_title">
+               fully customizable
+            </p>
+
+         </li>
+
+         <li class="option_items option_item3">
+            <img class="option_logo" src="./img/third.png" alt="" width="62" height="99">
+            <p class="option_item_title">
+               unlimited support
+            </p>
+
+         </li>
+
+         <li class="option_items option_item4">
+            <img class="option_logo" src="./img/fourth.png" alt="" width="102" height="79">
+            <p class="option_item_title">
+               responsive all device
+            </p>
+
+         </li>
+      </ul>
+
+   </section>
+
+
+
+
+
+<section id="service" class="our_services">
+<div class="main_wrapper">
+<h2 class="section_title">Our Services
+</h2>
+
+<ul class="container-tabs">
+<li class="service_tab" data-for-tab="1">Web design</li>
+<li class="service_tab tabs-active" data-for-tab="2">Graphic Design</li>
+<li class="service_tab" data-for-tab="3">Online support</li>
+<li class="service_tab" data-for-tab="4">App Design</li>
+<li class="service_tab" data-for-tab="5">Online Marketing</li>
+<li class="service_tab" data-for-tab="6">Seo Service</li>
+
+         </ul>
+         <ul class="container-content">
+
+            <li class="content" data-tab="1">
+               <img src="./img/tab_6.png" alt="tab_logo" class="content-logo" width="192" height="139">
+
+               <p class="content_text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+                  Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+               </p>
+            </li>
+
+            <li class="content" data-tab="2">
+               <img src="./img/tab_1.png" alt="tab_logo" class="content-logo" width="192" height="139">
+               <p class="content_text">
+                  Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect
+                  the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to
+                  thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north,
+                  who
+                  revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her
+                  being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new
+                  tomorrow.</p>
+            </li>
+
+            <li class="content" data-tab="3">
+               <img src="./img/tab_2.png" alt="tab_logo" class="content-logo" width="192" height="139">
+
+               <p class="content_text">
+                  In Noxus, warriors known as reckoners face one another in arenas where blood is spilled and strength
+                  tested—but none has ever been as celebrated as Draven. A former soldier, he found that the crowds
+                  uniquely appreciated his flair for the dramatic, not to mention the spray of blood from each of his
+                  spinning axes. Addicted to the spectacle of his own brash perfection, Draven has sworn to defeat
+                  whomever he must to ensure that his name is chanted throughout the empire forever more.</p>
+            </li>
+
+            <li class="content content-active" data-tab="4">
+               <img src="./img/tab_3.png" alt="tab_logo" class="content-logo" width="192" height="139">
+
+               <p class="content_text">
+                  A proud and noble soldier, Garen fights at the head of the Dauntless Vanguard. He is popular among his
+                  fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard
+                  family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a
+                  mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a
+                  veritable whirlwind of righteous steel.
+                  lo</p>
+            </li>
+
+            <li class="content" data-tab="5">
+               <img src="./img/tab_4.png" alt="tab_logo" class="content-logo" width="192" height="139">
+
+               <p class="content_text">
+                  Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber.
+                  Eldest
+                  daughter to the legendary General Du Couteau, she made her talents known with swift kills against
+                  unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the
+                  risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her
+                  duty amid a whirlwind of serrated daggers.</p>
+            </li>
+            <li class="content" data-tab="6">
+               <img src="./img/tab_5.png" alt="tab_logo" class="content-logo" width="192" height="139">
+
+               <p class="content_text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Deserunt mollit anim id est
+                  laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                  officia deserunt mollit anim id est laborum.</p>
+            </li>
+         </ul>
+
+      </div>
+   </section>
+
+   <section class="purchase-section">
+
+      <h2 class="purchase-slogan">
+         Everything is ready. just buy and install now
+      </h2>
+
+      <p class="purchase-text">
+         Smooth reliable, responsive ready, perfect portfolio, unique blog layout and many many options for you
+      </p>
+      <div class="purchase-links_wrap">
+
+         <a href="#" class="purchase-button">
+            PURCHASE NOW
+         </a>
+      </div>
+
+   </section>
+
+   <section id="work" class="our-amazing-work">
+      <div class="main_wrapper">
+         <h2 class="section_title works-title">Our Amazing Work
+         </h2>
+
+         <ul class="works-item-wrapper">
+
+            <li class="works-item">
+               <p class="item-works-title active title-all" data-choise="all">
+                  All
+               </p>
+            </li>
+
+            <li class="works-item">
+               <p class="item-works-title" data-choise="graphic-design">
+                  Graphic design
+               </p>
+            </li>
+
+            <li class="works-item">
+               <p class="item-works-title" data-choise="web-design">
+                  Web Design
+               </p>
+            </li>
+
+            <li class="works-item">
+               <p class="item-works-title" data-choise="landing-pages">
+                  Landing Pages
+               </p>
+            </li>
+
+            <li class="works-item">
+               <p class="item-works-title" data-choise="word-press">
+                  Wordpress
+               </p>
+            </li>
+
+         </ul>
+
+
+         <ul class="works-content-wrapper">
+
+
+         </ul>
+         <div class="btn-wrap">
+            <button class="load-morebtn">
+               <img class="btn-photo" src="./img/plus.png" alt="" width="18" height="19">
+               <span class="btn-text">
+                  LOAD MORE
+               </span>
+            </button>
+         </div>
+
+         <div class="container-loading active">
+            <svg viewBox="0 0 100 100">
+               <defs>
+                  <filter id="shadow">
+                     <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#fc6767" />
+                  </filter>
+               </defs>
+               <circle class="spinner"
+                  style="fill:transparent;stroke:#dd2476;stroke-width: 7px;stroke-linecap: round;filter:url(#shadow);"
+                  cx="50" cy="50" r="45" />
+            </svg>
+         </div>
+
+      </div>
+
+   </section>
+
+
+
+
+   <section class="breaking-news">
+
+
+      <div class="main_wrapper">
+
+         <h2 class="section_title news-title">Breaking News
+         </h2>
+
+         <ul class="news-card-wrap">
+            <li class="news-item">
+
+               <a href="#">
+                  <img src="./img/grid_1.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_2.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_3.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_4.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_5.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_6.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_7.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+            <li class="news-item">
+               <a href="#">
+                  <img src="./img/grid_8.png" alt="" width="263" height="208">
+                  <h3 class="card-title">
+                     Amazing Blog Post
+                  </h3>
+                  <div class="news-square">
+                     <p class="square-text">12<br>
+                        Feb
+                     </p>
+                  </div>
+                  <p class="card-text">
+                     By admin
+                     <span class="comment">
+                        2 comment
+                     </span>
+                  </p>
+
+               </a>
+
+            </li>
+         </ul>
+      </div>
+   </section>
+
+   <section class="slider" id="testimonial">
+
+
+      <div class="main_wrapper">
+
+         <p class="slider-slogan">
+            What People Say About theHam
+         </p>
+         <div class="wrap-img-slider">
+            <img class="shapes-slider" src="./img/shape_slider.png" alt="shapes" width="44" height="30">
+         </div>
+
+
+         <ul class="slider-for">
+            <li class="slide-container">
+               <p class="slide-text"> Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum
+                  odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui
+                  laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.
+               </p>
+               <div class="worker-wrap">
+                  <h4 class="worker-name">Hasan Ali
+                     <br>
+                     <span class="worker-work">UI Design
+                     </span>
+                  </h4>
+                  <img class="worker-photo" src="img/worker_1.png" alt="worker-photo" width="143" height="142">
+               </div>
+
+            </li>
+            <li class="slide-container">
+               <p class="slide-text"> quos labore hic quo saepe dolorum dolores. Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Asperiores ab officia reprehenderit iste maxime eveniet eos aliquid accusamus
+                  repellendus ex iusto, consectetur placeat quos vel tenetur perferendis sapiente perspiciatis porro.
+               </p>
+               <div class="worker-wrap">
+
+                  <h4 class="worker-name">Zest Wolf
+                     <br>
+                     <span class="worker-work">UUUUUU Design
+
+                     </span>
+                  </h4>
+                  <img class="worker-photo" src="img/worker_2.png" alt="worker-photo" width="143" height="142">
+               </div>
+
+            </li>
+            <li class="slide-container">
+               <p class="slide-text"> Minus, tempora rerum accusamus sint quam nulla aliquid similique? Sit eaque
+                  repellendus voluptas sint, asperiores voluptate nesciunt. Aliquam consequuntur ut cum esse.
+                  fdjghdfnuognfdulginfdulginfdgunfglfignfligunfukgnfkgnfdgkufdngukfnfgufkngkndfdf
+               </p>
+               <div class="worker-wrap">
+
+                  <h4 class="worker-name">Bern Ali
+                     <br>
+                     <span class="worker-work">Dorblu Design
+                     </span>
+                  </h4>
+                  <img class="worker-photo" src="img/worker_3.png" alt="worker-photo" width="143" height="142">
+               </div>
+
+            </li>
+            <li class="slide-container">
+               <p class="slide-text"> Aut, id? Eum quaerat ea ipsum nobis, dolore blanditiis tenetur officiis ex, quis
+                  dolorum molestiae mollitia velit ducimus aperiam itaque soluta veritatis.
+                  YAYAYDbsilfnsirhrerwroiryngevotigerotirgneotiegvhoirgofisfbgorysgnreugRERTGYHUJKFLNC
+               </p>
+               <div class="worker-wrap">
+
+                  <h4 class="worker-name">Clark Ali
+                     <br>
+                     <span class="worker-work">Borntroe
+
+                     </span>
+                  </h4>
+                  <img class="worker-photo" src="img/worker_4.png" alt="worker-photo" width="143" height="142">
+               </div>
+            </li>
+         </ul>
+
+
+         <div class="slider-nav-wrap">
+            <ul class="slider-nav">
+               <li class="slide-btn">
+                  <img class="worker-small-logo" src="./img/worker_1.png" alt="worker-photo" width="60" height="60">
+               </li>
+               <li class="slide-btn">
+                  <img class="worker-small-logo" src="./img/worker_2.png" alt="worker-photo" width="60" height="60">
+               </li>
+               <li class="slide-btn">
+                  <img class="worker-small-logo" src="./img/worker_3.png" alt="worker-photo" width="60" height="60">
+               </li>
+               <li class="slide-btn">
+                  <img class="worker-small-logo" src="./img/worker_4.png" alt="worker-photo" width="60" height="60">
+               </li>
+            </ul>
+
+         </div>
+
+
+
+
+
+      </div>
+   </section>
+
+   <section class="masonry-galery">
+      <div class="main_wrapper">
+         <h2 class="section_title gallery-title">Gallery of best images
+         </h2>
+
+
+         <div class="grid">
+            <div class="grid-sizer"></div>
+
+            <div class="gutter-sizer"></div>
+
+            <div class="grid-item grid-item--first">
+               <img src="./img/masonry_1.png" alt="grid_masonry">
+
+
+            </div>
+
+            <div class="grid-item grid-item--height1-2  grid-item--first">
+               <img src="./img/masonry_2.png" alt="grid_masonry">
+            </div>
+            <div class="grid-item grid-item--height1-2 grid-item--first">
+               <div class="center-images">
+
+                  <div class="item-hidiing">
+                     <img src="./img/masonry_7.png" alt="grid_masonry">
+                     <div class="hide-masonry-block">
+                        <div class="hide-el-wrapper">
+                           <svg class="hide-el-masonry" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.37262 5.66669L9 9" stroke="white" />
+                              <circle cx="3.5" cy="3.5" r="3" stroke="white" />
+                           </svg>
+                        </div>
+                        <div class="hide-el-wrapper2">
+
+                           <svg class="hide-el-masonry" width="12" height="11" viewBox="0 0 12 11" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M0.700061 10C0.700061 10.1657 0.834376 10.3 1.00006 10.3L3.70006 10.3C3.86575 10.3 4.00006 10.1657 4.00006 10C4.00006 9.83431 3.86575 9.7 3.70006 9.7H1.30006V7.3C1.30006 7.13431 1.16575 7 1.00006 7C0.834376 7 0.700061 7.13431 0.700061 7.3L0.700061 10ZM3.78793 6.78787L0.787929 9.78787L1.21219 10.2121L4.21219 7.21213L3.78793 6.78787Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M0.999864 0.700202C0.834179 0.700267 0.699917 0.834634 0.699982 1.00032L0.701042 3.70032C0.701107 3.866 0.835474 4.00027 1.00116 4.0002C1.16685 4.00014 1.30111 3.86577 1.30104 3.70008L1.3001 1.30008L3.7001 1.29914C3.86579 1.29908 4.00005 1.16471 3.99998 0.999024C3.99992 0.833338 3.86555 0.699077 3.69986 0.699141L0.999864 0.700202ZM4.21321 3.78681L1.21203 0.787986L0.787933 1.21242L3.78911 4.21124L4.21321 3.78681Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M11.3001 1C11.3001 0.834315 11.1657 0.7 11.0001 0.7L8.30006 0.7C8.13438 0.7 8.00006 0.834315 8.00006 1C8.00006 1.16569 8.13438 1.3 8.30006 1.3H10.7001V3.7C10.7001 3.86569 10.8344 4 11.0001 4C11.1657 4 11.3001 3.86569 11.3001 3.7L11.3001 1ZM8.21219 4.21213L11.2122 1.21213L10.7879 0.787868L7.78793 3.78787L8.21219 4.21213Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M11.0297 10.2727C11.1954 10.2712 11.3285 10.1357 11.327 9.97001L11.3026 7.27012C11.3011 7.10445 11.1656 6.97135 10.9999 6.97285C10.8342 6.97435 10.7011 7.10988 10.7026 7.27555L10.7243 9.67546L8.32442 9.69717C8.15874 9.69867 8.02565 9.8342 8.02715 9.99988C8.02865 10.1656 8.16417 10.2986 8.32985 10.2971L11.0297 10.2727ZM7.7898 7.21404L10.8168 10.1868L11.2372 9.75869L8.2102 6.78596L7.7898 7.21404Z"
+                                 fill="#F8FCFE" />
+                           </svg>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="item-hidiing">
+                     <img src="./img/masonry_8.png" alt="grid_masonry">
+                     <div class="hide-masonry-block">
+                        <div class="hide-el-wrapper">
+                           <svg class=" hide-el-masonry hide-el-masonry1" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.37262 5.66669L9 9" stroke="white" />
+                              <circle cx="3.5" cy="3.5" r="3" stroke="white" />
+                           </svg>
+                        </div>
+                        <div class="hide-el-wrapper2">
+
+                           <svg class=" hide-el-masonry hide-el-masonry1" width="12" height="11" viewBox="0 0 12 11"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M0.700061 10C0.700061 10.1657 0.834376 10.3 1.00006 10.3L3.70006 10.3C3.86575 10.3 4.00006 10.1657 4.00006 10C4.00006 9.83431 3.86575 9.7 3.70006 9.7H1.30006V7.3C1.30006 7.13431 1.16575 7 1.00006 7C0.834376 7 0.700061 7.13431 0.700061 7.3L0.700061 10ZM3.78793 6.78787L0.787929 9.78787L1.21219 10.2121L4.21219 7.21213L3.78793 6.78787Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M0.999864 0.700202C0.834179 0.700267 0.699917 0.834634 0.699982 1.00032L0.701042 3.70032C0.701107 3.866 0.835474 4.00027 1.00116 4.0002C1.16685 4.00014 1.30111 3.86577 1.30104 3.70008L1.3001 1.30008L3.7001 1.29914C3.86579 1.29908 4.00005 1.16471 3.99998 0.999024C3.99992 0.833338 3.86555 0.699077 3.69986 0.699141L0.999864 0.700202ZM4.21321 3.78681L1.21203 0.787986L0.787933 1.21242L3.78911 4.21124L4.21321 3.78681Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M11.3001 1C11.3001 0.834315 11.1657 0.7 11.0001 0.7L8.30006 0.7C8.13438 0.7 8.00006 0.834315 8.00006 1C8.00006 1.16569 8.13438 1.3 8.30006 1.3H10.7001V3.7C10.7001 3.86569 10.8344 4 11.0001 4C11.1657 4 11.3001 3.86569 11.3001 3.7L11.3001 1ZM8.21219 4.21213L11.2122 1.21213L10.7879 0.787868L7.78793 3.78787L8.21219 4.21213Z"
+                                 fill="#F8FCFE" />
+                              <path
+                                 d="M11.0297 10.2727C11.1954 10.2712 11.3285 10.1357 11.327 9.97001L11.3026 7.27012C11.3011 7.10445 11.1656 6.97135 10.9999 6.97285C10.8342 6.97435 10.7011 7.10988 10.7026 7.27555L10.7243 9.67546L8.32442 9.69717C8.15874 9.69867 8.02565 9.8342 8.02715 9.99988C8.02865 10.1656 8.16417 10.2986 8.32985 10.2971L11.0297 10.2727ZM7.7898 7.21404L10.8168 10.1868L11.2372 9.75869L8.2102 6.78596L7.7898 7.21404Z"
+                                 fill="#F8FCFE" />
+                           </svg>
+                        </div>
+
+                     </div>
+                  </div>
+                  <img src="./img/masonry_99.png" alt="grid_masonry" width="124" height="92">
+                  <img src="./img/masonry_999.png" alt="grid_masonry" width="119" height="92">
+                  <img src="./img/masonry_9999.png" alt="grid_masonry" width="115" height="92">
+                  <img src="./img/masonry_99.png" alt="grid_masonry" width="124" height="92">
+                  <img src="./img/masonry_99.png" alt="grid_masonry" width="119" height="92">
+                  <img src="./img/masonry_999.png" alt="grid_masonry" width="115" height="92">
+                  <img src="./img/masonry_9999.png" alt="grid_masonry" width="124" height="92">
+                  <img src="./img/masonry_99.png" alt="grid_masonry" width="119" height="92">
+                  <img src="./img/masonry_999.png" alt="grid_masonry" width="115" height="92">
+
+
+               </div>
+            </div>
+
+            <div class="grid-item">
+               <img src="./img/masonry_4.png" alt="grid_masonry">
+            </div>
+
+            <div class="grid-item   grid-item--height1-2">
+               <img src="./img/masonry_4.png" alt="grid_masonry">
+            </div>
+
+            <div class="grid-item grid-item--height1-2">
+               <img src="./img/masonry_10.png" alt="grid_masonry">
+            </div>
+
+            <div class="grid-item ">
+               <img src="./img/masonry_5.png" alt="grid_masonry">
+            </div>
+
+            <div class="grid-item   grid-item--height1-2">
+               <img src="./img/masonry_1.png" alt="grid_masonry">
+            </div>
+
+
+         </div>
+
+         <div class="btn-wrap">
+            <button class="load-morebtn">
+               <img class="btn-photo" src="./img/plus.png" alt="" width="18" height="19">
+               <span class="btn-text">
+                  LOAD MORE
+               </span>
+            </button>
+         </div>
+   </section>
+
+
+
+   <footer class="footer">
+
+      <p class="footer-text">
+         © Copyright 2015 theHam<span class="footer-element">All Rights Reserved</span>
+      </p>
+   </footer>
+
+ 
+      
+
+   <script src="./jquery-3.6.3.min.js"></script>
+   <script src="./masonry.pkgd.min.js"></script>
+   <script type="text/javascript" src="./slick-1.8.1/slick/slick.js"></script>
+   <script src="./js/script.js"></script>
+</body>
+
+</html>
