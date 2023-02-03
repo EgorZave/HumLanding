@@ -730,9 +730,7 @@ transition: transform .7s ease;
    padding-bottom: 100px;
   
 }
-.slick-list{
-   /* overflow-x: visible ; */
-}
+
 .footer{
    width: 100%;
    background: #22353F;
