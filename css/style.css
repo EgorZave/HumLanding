@@ -4,6 +4,7 @@ body{
   width: 100%;
   position: relative;
   overflow-x: hidden;
+  min-width: 1200px;
 }
 p{
    padding: 0;
@@ -602,7 +603,7 @@ color: #18CFAB;
    
 .slider{
    background: url(../img/photo_back.png);
-
+   max-width: 100%;
    background-size: cover;
    background-repeat: no-repeat;
    position: relative;
@@ -722,7 +723,7 @@ margin-bottom: 37px;
 
 .slider-nav-wrap .slick-slide.slick-current{
 transform: translateY(-13px);
-transition: transform .5s ease;
+transition: transform .7s ease;
 }
 
 .slider-nav-wrap{
@@ -730,7 +731,7 @@ transition: transform .5s ease;
   
 }
 .slick-list{
-   overflow: visible ;
+   /* overflow-x: visible ; */
 }
 .footer{
    width: 100%;
@@ -893,7 +894,7 @@ opacity: 1;
 }
 
 .slider__control-wrapper {
-   /* position: relative; */
+
    display: inline-block;
 }
 

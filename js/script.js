@@ -27,8 +27,7 @@ $('.slider-nav').slick({
  let contentContainer = document.querySelector('.container-content');
  let loadMore = document.querySelector('.load-morebtn');
  let loadText = document.querySelector('.btn-text');  
- let itemWorksContent = document.querySelectorAll('.item-works-content');
- let worksWrap = document.querySelector('.works-item-wrapper');
+
  let listItems = document.querySelectorAll('.works-item');
  let loader = document.querySelector('.container-loading');
  // ----------------------------------------------------
@@ -63,7 +62,7 @@ function work() {
      const data = array[index];
      const newData = data.replace(/(\s?-\s?)|\s/g, " ");
      const li = `
-       <li class="item-works-content ${data}" >
+       <li class="item-works-content" data-filter-choise = "${data}" >
        <img src="./img/amazing-work${i}.png" alt="works-photo" width="285" height="211"> 
        <div class="hidden-block">
        <div class="hidden-imgs">
@@ -92,45 +91,37 @@ function work() {
  }
  
  function filter() {
-   worksWrap.addEventListener("click", (event) => {
-     const targetId = event.target.dataset.choise,
-       target = event.target;
- 
-     if (target.classList.contains("item-works-title")) {
-       itemsWorksTitle.forEach((item) => {
-         item.classList.remove("active");
-         target.classList.add("active");
-        });
-      }
-      
-     switch (targetId) {
-       case "all":
-         getItems("item-works-content");
-         break;
-       case "graphic-design":
-        getItems(targetId);
-         break;
-       case "web-design":
-         getItems(targetId);
-         break;
-       case "landing-pages":
-         getItems(targetId);
-         break;
-         case "word-press":
-            getItems(targetId);
-         break;
-      }
-   });
-}
+  const btn = document.querySelector('.works-item-wrapper');
+  const tab = document.querySelectorAll('.item-works-title');
+  const image = document.querySelectorAll('.item-works-content');
+  btn.addEventListener('click',  (el) => {
+     console.log(el.target);
+     if(el.target.tagName === 'P'){
+      tab.forEach((element)=>{
+       element.classList.remove('active');
+       el.target.classList.add('active');
+      })
+      image.forEach((img)=>{
+         if(el.target.dataset.choise === "all"){
+            img.style.display = 'block';
+         } else if (el.target.dataset.choise === img.dataset.filterChoise){
+            img.style.display = "block";
+         } else {
+            img.style.display = 'none'
+         }
+      })
+     }
+  })
+  }
 
  
          loadMore.addEventListener("click", () => {
             loader.classList.remove("active");
-            loadMore.remove();       
-                  function addLi() {
-     
+            loadMore.remove();  
+                 
+                  function addLi() { 
                      work();
-  
+                     filter();
     loader.remove();
 
    }
@@ -138,21 +129,8 @@ function work() {
 });
 
 work();
-
-
-
 filter();
-function getItems(className) {
-  let itemWorksContent = document.querySelectorAll(".item-works-content");
-  console.log(itemWorksContent);
-  itemWorksContent.forEach((item) => {
 
-    item.classList.remove("filter");
-    if (!item.classList.contains(className)) {
-      item.classList.add("filter");
-    }
-  });
-}
 // ----------------------------------------------------
 
 
