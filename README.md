@@ -1,5 +1,5 @@
-# StepProject1
-https://egorzave.github.io/StepProject1/
+#Hum Landing with JS
+https://egorzave.github.io/HumLanding/
 
 
 Used: 
